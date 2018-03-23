@@ -1,4 +1,4 @@
-package io.github.gablemos.phonebook.ui.domain;
+package io.github.gablemos.phonebook.domain;
 
 
 import org.springframework.stereotype.Component;

@@ -5,7 +5,7 @@ import com.fasterxml.jackson.core.ObjectCodec;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonDeserializer;
 import com.fasterxml.jackson.databind.JsonNode;
-import io.github.gablemos.phonebook.ui.domain.Person;
+import io.github.gablemos.phonebook.domain.Person;
 
 import java.io.IOException;
 
