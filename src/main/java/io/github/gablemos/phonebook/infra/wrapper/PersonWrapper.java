@@ -1,26 +1,20 @@
 package io.github.gablemos.phonebook.infra.wrapper;
 
-import com.fasterxml.jackson.core.JsonParser;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.ObjectCodec;
-import com.fasterxml.jackson.databind.DeserializationContext;
-import com.fasterxml.jackson.databind.JsonDeserializer;
-import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import io.github.gablemos.phonebook.infra.serializer.PersonDeserializer;
 import io.github.gablemos.phonebook.ui.domain.Person;
 
-import java.io.IOException;
+@JsonDeserialize(using = PersonDeserializer.class)
+public class PersonWrapper {
 
-public class PersonWrapper extends JsonDeserializer<Person>{
+    private final Person person;
 
-    @Override
-    public Person deserialize(JsonParser jsonParser, DeserializationContext deserializationContext)
-            throws IOException, JsonProcessingException {
-        ObjectCodec objectCodec = jsonParser.getCodec();
-        JsonNode jsonNode = objectCodec.readTree(jsonParser);
+    public PersonWrapper(final Person person) {
+        super();
+        this.person = person;
+    }
 
-        final String nome = jsonNode.get("name").asText();
-        final String phone = jsonNode.get("phone").asText();
-
-        return new Person(nome, phone);
+    public Person getPerson() {
+        return person;
     }
 }
