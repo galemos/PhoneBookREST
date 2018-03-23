@@ -1,7 +1,7 @@
 package io.github.gablemos.phonebook.ui.controller;
 
 import io.github.gablemos.phonebook.infra.wrapper.PersonWrapper;
-import io.github.gablemos.phonebook.ui.domain.PhoneBook;
+import io.github.gablemos.phonebook.domain.PhoneBook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
