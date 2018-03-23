@@ -7,11 +7,9 @@ import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonDeserializer;
 import com.fasterxml.jackson.databind.JsonNode;
 import io.github.gablemos.phonebook.ui.domain.Person;
-import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 
-@Service
 public class PersonWrapper extends JsonDeserializer<Person>{
 
     @Override

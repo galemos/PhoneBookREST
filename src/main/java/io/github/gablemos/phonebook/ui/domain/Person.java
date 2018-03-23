@@ -1,7 +1,5 @@
 package io.github.gablemos.phonebook.ui.domain;
 
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-
 public class Person {
 
     private final String name;
